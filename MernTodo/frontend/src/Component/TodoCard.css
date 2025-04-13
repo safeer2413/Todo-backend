@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background:rgb(206, 193, 255);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #2E7D32;
+}
+
+/* Wrapper */
+.todo-wrapper {
+  /* linear-gradient(135deg, #E0F2F1, #A5D6A7) */
+  width: 400px;
+  background: rgb(82, 57, 171);
+  padding: 20px;
+  border-radius: 12px;
+  border:solid rgb(29, 12, 91);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* App Title */
+.app-title {
+  font-size: 26px;
+  color: rgb(29, 12, 91);
+  margin-bottom: 20px;
+  
+}
+
+/* Form Styling */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+.todo-input{
+  height: 50px;
+}
+
+.todo-input,
+.todo-textarea {
+  width: 60%;
+  padding-top: 12px;
+  border: 2px solid rgb(29, 12, 91);
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  background:rgb(206, 193, 255);
+  color: #2E7D32;
+  transition: border 0.3s ease-in-out;
+}
+
+.todo-input:focus,
+.todo-textarea:focus {
+  border-color: #2E7D32;
+  outline: none;
+}
+
+.todo-textarea {
+  height: 150px;
+  resize: none;
+}
+.todo-form{
+  align-items: center;
+}
+
+.todo-button {
+  background-color: rgb(29, 12, 91);
+  color: white;
+  width: 60%;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+.todo-button:hover {
+  background-color: #2E7D32;
+}
+
+/* Todo List */
+.todo-container {
+  margin-top: 20px;
+}
+
+.todo-heading {
+  font-size: 20px;
+  color: rgb(29, 12, 91);
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Todo Card */
+.todo-card {
+  /*  #dff8c2 */
+  background:rgb(139, 123, 199);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 10px solid rgb(29, 12, 91);
+  transition: transform 0.2s ease-in-out;
+}
+
+.todo-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Todo Title */
+.todo-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(29, 12, 91);
+  margin-bottom: 5px;
+}
+
+/* Todo Description */
+.todo-desc {
+  font-size: 14px;
+  color: rgb(231, 230, 236);
+}
+
+/* Loader */
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: rgb(62, 42, 133);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: rgb(96, 80, 153)
+}
+
+/* Delete Icon */
+.delete-icon {
+  font-size: 18px;
+}
+
+/* Empty Message */
+.empty-message {
+  margin-top: 40%;
+  color: rgb(29, 12, 91);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* <HashLoader color="#66BB6A" /> */
