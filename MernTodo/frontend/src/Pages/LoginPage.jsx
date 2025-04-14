@@ -77,7 +77,7 @@ function LoginPage() {
 
                     <div className="message">
                         <Link to="/register" className="message">
-                            Create an Account
+                            Create an Account? <strong>Register</strong>
                         </Link>
                     </div>
 

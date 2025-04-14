@@ -120,48 +120,6 @@ function Homepage() {
 
         </>
 
-        // <>
-        //     <div className="screen-container">
-        //         {/* Left Side - Form */}
-        //         <div className="left-panel">
-        //             <button onClick={logoutHandler}>LogOut</button>
-        //             <h1 className="app-title">Todo List</h1>
-        //             <form onSubmit={addTodoHandler} className="todo-form">
-        //                 <input
-        //                     type="text"
-        //                     placeholder="Enter Title"
-        //                     value={title}
-        //                     onChange={(e) => setTitle(e.target.value)}
-        //                     className="todo-input"
-        //                     required
-        //                 />
-        //                 <textarea
-        //                     placeholder="Enter Description"
-        //                     value={description}
-        //                     onChange={(e) => setDescription(e.target.value)}
-        //                     className="todo-textarea"
-        //                     required
-        //                 ></textarea>
-
-        //                 <button type="submit" className="todo-button">
-        //                     {isLoading ? 'Loading...' : 'Add Todo'}
-        //                 </button>
-
-        //                 {isLoading && (
-        //                     <div className="loader">
-        //                         <ScaleLoader color="rgb(29, 12, 91)" />
-        //                     </div>
-        //                 )}
-        //             </form>
-        //         </div>
-
-        //         {/* Right Side - Todo List */}
-        //         <div className="right-panel">
-        //             <TodoCard todos={todos} deleteTodo={deleteTodoHandler} />
-        //         </div>
-        //     </div>
-        // </>
-
     )
 }
 

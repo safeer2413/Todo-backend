@@ -121,3 +121,12 @@ Centered Login Page body {
     background: rgb(82, 57, 171);
     overflow-y: auto;
 }
+.message{
+    margin-top: 10px;
+    color: rgb(29, 12, 91);
+    text-decoration: none;
+}
+.message:hover{
+    color: rgb(5, 21, 30);
+
+}
