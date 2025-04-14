@@ -1,8 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background:rgb(206, 193, 255);
-  margin: 0;
+  background: rgb(139, 123, 199);  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -18,7 +17,7 @@ body {
   background: rgb(82, 57, 171);
   padding: 20px;
   border-radius: 12px;
-  border:solid rgb(29, 12, 91);
+  border: solid rgb(29, 12, 91);
 
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -29,7 +28,7 @@ body {
   font-size: 26px;
   color: rgb(29, 12, 91);
   margin-bottom: 20px;
-  
+
 }
 
 /* Form Styling */
@@ -37,9 +36,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  
+
 }
-.todo-input{
+
+.todo-input {
   height: 50px;
 }
 
@@ -51,7 +51,7 @@ body {
   border-radius: 6px;
   font-size: 16px;
   text-align: center;
-  background:rgb(206, 193, 255);
+  background: rgb(206, 193, 255);
   color: #2E7D32;
   transition: border 0.3s ease-in-out;
 }
@@ -66,7 +66,8 @@ body {
   height: 150px;
   resize: none;
 }
-.todo-form{
+
+.todo-form {
   align-items: center;
 }
 
@@ -106,7 +107,7 @@ body {
 /* Todo Card */
 .todo-card {
   /*  #dff8c2 */
-  background:rgb(139, 123, 199);
+  background: rgb(139, 123, 199);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -133,7 +134,7 @@ body {
 }
 
 /* Loader */
-.loader{
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,4 +169,6 @@ body {
   text-align: center;
 }
 
-/* <HashLoader color="#66BB6A" /> */
+/* <HashLoader color="#66BB6A" 
+    background: rgb(91, 84, 117);
+/> */

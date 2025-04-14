@@ -13,7 +13,7 @@ function TodoCard({ todos, deleteTodo }) {
       <h1 className="todo-heading">Your Todos</h1>
       <div className="todo-list">
       {!todos ||todos.length === 0 ? (
-          <p className="empty-message message">No todos yet! Add some tasks.</p>
+          <p className="empty-message">No todos yet! Add some tasks.</p>
         ) : (
           todos.map((todo) => (
             <div key={todo._id} className="todo-card">
