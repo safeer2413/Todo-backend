@@ -12,7 +12,6 @@ body {
 
 /* Wrapper */
 .todo-wrapper {
-  /* linear-gradient(135deg, #E0F2F1, #A5D6A7) */
   width: 400px;
   background: rgb(82, 57, 171);
   padding: 20px;
@@ -27,7 +26,7 @@ body {
 .app-title {
   font-size: 26px;
   color: rgb(29, 12, 91);
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 
 }
 
@@ -68,6 +67,7 @@ body {
 }
 
 .todo-form {
+  margin-top: 0px;
   align-items: center;
 }
 
@@ -93,12 +93,13 @@ body {
 }
 
 .todo-heading {
-  font-size: 20px;
+  font-size: 30px;
   color: rgb(29, 12, 91);
-  margin-bottom: 10px;
+  margin-bottom:30px;
 }
 
 .todo-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -106,10 +107,10 @@ body {
 
 /* Todo Card */
 .todo-card {
-  /*  #dff8c2 */
   background: rgb(139, 123, 199);
   padding: 15px;
   border-radius: 10px;
+  border: solid rgb(29, 12, 91);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-left: 10px solid rgb(29, 12, 91);
   transition: transform 0.2s ease-in-out;
@@ -135,6 +136,9 @@ body {
 
 /* Loader */
 .loader {
+  position: absolute;
+  top: 150px;
+  left: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,12 +167,8 @@ body {
 
 /* Empty Message */
 .empty-message {
-  margin-top: 40%;
+  margin-top: 30%;
   color: rgb(29, 12, 91);
   font-size: 14px;
   text-align: center;
 }
-
-/* <HashLoader color="#66BB6A" 
-    background: rgb(91, 84, 117);
-/> */

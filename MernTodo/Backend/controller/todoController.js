@@ -45,7 +45,6 @@ const updateTodoHandler = asyncHandler(async (req, res) => {
         return res.json(updateTodo)
     }
     else {
-        toast.error('Todo not found');
         return res.status(400).json({ message: 'Todo not found' })
     }
 
@@ -59,7 +58,6 @@ const getTodoHandler = asyncHandler(async (req, res) => {
     const todo = await Todo.findById(id)
 
     if (!todo) {
-        toast.error('Todo not found');
         return res.status(404).json({ message: "Todo not found" });
     }
 
@@ -75,12 +73,10 @@ const deleteTodo = asyncHandler(async (req, res) => {
     const id = await Todo.findByIdAndDelete(req.params.id);
 
     if (!id) {
-        toast.error('Todo not found');
         return res.status(404).json({ message: 'Todo not found' })
     };
 
-    toast.success('Succefully Deleted');
-    return res.status(200).send('Succefully Deleted');
+    res.status(200).json({ message: "Successfully Deleted" });
 
 });
 

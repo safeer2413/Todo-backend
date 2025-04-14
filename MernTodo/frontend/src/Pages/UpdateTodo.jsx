@@ -49,7 +49,7 @@ function UpdateTodo() {
   return (
     <>
       {isLoading ? (
-        <div className="loader">
+        <div className="loader-update">
           <ScaleLoader color="rgb(29, 12, 91)" />
         </div>
 
@@ -78,6 +78,7 @@ function UpdateTodo() {
 
               <option value="false">Pending</option>
               <option value="true">Completed</option>
+              
             </select>
 
             <button type="submit" className="todo-button">{isLoading ? 'Loading...' : 'Update'} </button>

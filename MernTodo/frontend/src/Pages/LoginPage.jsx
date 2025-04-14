@@ -13,10 +13,7 @@ function LoginPage() {
     const { userInfo } = useSelector((state) => state.auth)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [isLoading] = useState(false);
-    // const [isLoading, setIsLoading] = useState(false);
-
-    const [userLogin] = useUserLoginMutation();
+    const [userLogin, { isLoading }] = useUserLoginMutation();
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -39,9 +36,9 @@ function LoginPage() {
 
     useEffect(() => {
         if (userInfo) {
-            navigate("/")
+          navigate("/");
         }
-    }, []);
+      }, [userInfo, navigate]);
 
     return (
         <>

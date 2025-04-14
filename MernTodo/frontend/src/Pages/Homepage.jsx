@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import TodoCard from '../Component/TodoCard';
 import { ScaleLoader } from "react-spinners";
@@ -103,16 +104,11 @@ function Homepage() {
                             {isLoading ? 'Loading...' : 'Add Todo'}
                         </button>
 
-                        {isLoading && (
-                            <div className="loader">
-                                <ScaleLoader color="rgb(29, 12, 91)" />
-                            </div>
-                        )}
                     </form>
                 </div>
 
                 <div className='right-panel'>
-                    <TodoCard todos={todos} deleteTodo={deleteTodoHandler} />
+                    <TodoCard todos={todos} isLoading={isLoading} deleteTodo={deleteTodoHandler} />
                 </div>
             </div>
 
