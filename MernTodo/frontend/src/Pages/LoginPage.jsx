@@ -36,9 +36,9 @@ function LoginPage() {
 
     useEffect(() => {
         if (userInfo) {
-          navigate("/");
+            navigate("/");
         }
-      }, [userInfo, navigate]);
+    }, [userInfo, navigate]);
 
     return (
         <>

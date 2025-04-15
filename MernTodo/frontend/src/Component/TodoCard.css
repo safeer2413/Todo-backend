@@ -26,7 +26,7 @@ body {
 .app-title {
   font-size: 26px;
   color: rgb(29, 12, 91);
-  margin-bottom: 0px;
+  margin-top: 0px;
 
 }
 
@@ -51,7 +51,7 @@ body {
   font-size: 16px;
   text-align: center;
   background: rgb(206, 193, 255);
-  color: #2E7D32;
+  color: rgb(29, 12, 91);
   transition: border 0.3s ease-in-out;
 }
 
@@ -69,6 +69,7 @@ body {
 .todo-form {
   margin-top: 0px;
   align-items: center;
+
 }
 
 .todo-button {
@@ -85,6 +86,9 @@ body {
 
 .todo-button:hover {
   background-color: #2E7D32;
+  padding:11px;
+  border: solid rgb(29, 12, 91);
+
 }
 
 /* Todo List */
@@ -157,7 +161,9 @@ body {
 }
 
 .delete-button:hover {
-  background-color: rgb(96, 80, 153)
+  /* background-color: rgb(96, 80, 153); */
+  border: solid rgb(29, 12, 91);
+  padding: 7px 11px;
 }
 
 /* Delete Icon */

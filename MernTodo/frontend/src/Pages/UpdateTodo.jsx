@@ -10,7 +10,7 @@ function UpdateTodo() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { data: todo, isLoading, refetch } = useGetTodoQuery( id );
+  const { data: todo, isLoading, refetch } = useGetTodoQuery(id);
   const { refetch: todosRefetch } = useGetTodosQuery({
     userId: userInfo?._id,
   });
@@ -73,12 +73,17 @@ function UpdateTodo() {
               required
             ></textarea>
 
-            <select value={status?.toString()}
-              onChange={(e) => setStatus(e.target.value === "true")}>
+            <select className='status' value={status?.toString()}
+              onChange={(e) => setStatus(e.target.value === "true")}
+              style={{
+                backgroundColor: status === true ? "lightgreen" : "rgb(185, 6, 6)",
+                color: status === true ? "rgb(29, 12, 91)" : "white"
+              }}
+            >
 
-              <option value="false">Pending</option>
-              <option value="true">Completed</option>
-              
+              <option className='status-false' value="false">Pending</option>
+              <option className='status-true' value="true">Completed</option>
+
             </select>
 
             <button type="submit" className="todo-button">{isLoading ? 'Loading...' : 'Update'} </button>

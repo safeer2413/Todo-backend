@@ -27,7 +27,7 @@ function TodoCard({ todos, deleteTodo, isLoading }) {
                 className="todo-title"
                 style={{
                   textDecoration: todo.status ? "line-through" : "none",
-                  color: todo.status ? "gray" : "black",
+                  color: todo.status ? "rgb(99, 89, 128)" : "",
                 }}
               >
                 {todo.title}
@@ -36,7 +36,7 @@ function TodoCard({ todos, deleteTodo, isLoading }) {
                 className="todo-desc"
                 style={{
                   textDecoration: todo.status ? "line-through" : "none",
-                  color: todo.status ? "gray" : "black",
+                  color: todo.status ? "rgb(99, 89, 128)" : "",
                 }}
               >
                 <b>{todo.description}</b>
