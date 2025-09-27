@@ -38,7 +38,7 @@ function LoginPage() {
         if (userInfo) {
             navigate("/");
         }
-    }, [userInfo, navigate]);
+    }, [userInfo, navigate]);  
 
     return (
         <>
