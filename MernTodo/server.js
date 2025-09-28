@@ -7,7 +7,7 @@ import router from "./Routes/todoRoutes.js";
 import cors from 'cors'
 import { notFound, errorHandler } from './middlewares/errorMiddleware.js'
 import cookieParser from "cookie-parser";
-
+import path from 'path';
 
 const app = express()
 connectDb()
@@ -18,12 +18,22 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// API routes
 app.use('/api/todo', router);
 app.use('/api/users', userRoutes);
 
+// Serve frontend static files
+app.use(express.static(path.join(process.cwd(), 'Frontend/dist')));
+
+// SPA fallback for frontend routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(process.cwd(), 'Frontend/dist', 'index.html'));
+});
+
+// Error handling
 app.use(notFound);
 app.use(errorHandler);
 
 app.listen(port, () => {
-    console.log('Server Started Succes');
+    console.log(`Server running on port ${port}`);
 })
