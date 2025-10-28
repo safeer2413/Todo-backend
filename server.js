@@ -15,9 +15,16 @@ connectDb()
 const port = process.env.PORT || 5001;
 
 // ✅ CORS config
+
+const allowedOrigins = [
+    "http://localhost:5173", // local testing
+    "https://todo-frontend-tawny-eta.vercel.app", // Vercel frontend
+];
+
 app.use(cors({
-    origin: "https://todo-frontend-tawny-eta.vercel.app",
+    origin: allowedOrigins,
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
 app.use(cookieParser());
@@ -29,15 +36,15 @@ app.use('/api/todo', todoRoutes);
 app.use('/api/users', userRoutes);
 
 // ✅ Serve frontend only in production
-if (process.env.NODE_ENV === "production") {
-    const __dirname = path.resolve();
-    app.use(express.static(path.join(__dirname, 'Frontend/dist')));
+// if (process.env.NODE_ENV === "production") {
+//     const __dirname = path.resolve();
+//     app.use(express.static(path.join(__dirname, 'Frontend/dist')));
 
-    // SPA fallback (only for non-API routes)
-    app.get(/^\/(?!api).*/, (req, res) => {
-        res.sendFile(path.join(__dirname, 'Frontend/dist', 'index.html'));
-    });
-}
+// SPA fallback (only for non-API routes)
+// app.get(/^\/(?!api).*/, (req, res) => {
+//     res.sendFile(path.join(__dirname, 'Frontend/dist', 'index.html'));
+// });
+// }
 
 // ✅ Error handling
 app.use(notFound);
