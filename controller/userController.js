@@ -44,12 +44,12 @@ const authUser = asyncHandler(async (req, res) => {
     if (user && (await user.matchPassword(password))) {
 
 
-        const token = jwt.sign({ userId: user._id }, process.env.JwT_SECRET, { expiresIn: '30d' });
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 
         res.cookie('jwt', token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'strict',
+            secure: true,
+            sameSite: 'none',
             maxAge: 30 * 24 * 60 * 60 * 1000
         });
 

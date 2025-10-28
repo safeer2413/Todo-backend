@@ -35,17 +35,6 @@ app.use(express.json());
 app.use('/api/todo', todoRoutes);
 app.use('/api/users', userRoutes);
 
-// ✅ Serve frontend only in production
-// if (process.env.NODE_ENV === "production") {
-//     const __dirname = path.resolve();
-//     app.use(express.static(path.join(__dirname, 'Frontend/dist')));
-
-// SPA fallback (only for non-API routes)
-// app.get(/^\/(?!api).*/, (req, res) => {
-//     res.sendFile(path.join(__dirname, 'Frontend/dist', 'index.html'));
-// });
-// }
-
 // ✅ Error handling
 app.use(notFound);
 app.use(errorHandler);
